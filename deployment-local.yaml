@@ -1,0 +1,63 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: '1'
+  name: abi-cloud-maven-archetype
+  labels:
+    app: abi-cloud-maven-archetype
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 25%
+  selector:
+    matchLabels:
+      app: abi-cloud-maven-archetype
+  template:
+    metadata:
+      labels:
+        app: abi-cloud-maven-archetype
+      annotations:
+        armsPilotAutoEnable: "on"
+        armsPilotCreateAppName: "abi-cloud-maven-archetype-dev"
+    spec:
+      containers:
+        - name: abi-cloud-maven-archetype
+          image: registry-vpc.cn-shanghai.aliyuncs.com/ab-inbev-apac/abi-cloud-maven-archetype:1.0
+          imagePullPolicy: Always
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              valueFrom:
+                configMapKeyRef:
+                  name: env
+                  key: spring.profiles.active
+            # Time Zone config
+            - name: TZ
+              value: Asia/Shanghai
+            - name: aliyun_logs_abi-cloud-maven-archetype-log
+              value: stdout
+            - name: JAVA_OPTS
+              value: -server -Xms2048m -Xmx2048m -Xmn800m -XX:ActiveProcessorCount=2 -XX:MaxMetaspaceSize=256m -XX:MetaspaceSize=256m -Xss256k -XX:+UseContainerSupport -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=80 -XX:+UseCMSInitiatingOccupancyOnly -XX:AutoBoxCacheMax=20000 -Dsun.net.inetaddr.ttl=3 -Dsun.net.inetaddr.negative.ttl=1
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            tcpSocket:
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          resources:
+            limits:
+              memory: 4096Mi
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/bash", "-c", "sleep 10"]
+      serviceAccountName: config-reader
+      imagePullSecrets:
+        - name: acr-credential-27b7396c3bc51e6df6ffbf8189648a39
+
+
