@@ -1,6 +1,6 @@
 package com.abi.maven.archetype.controller.app;
 
-import com.abi.base.foundation.response.ApiResponse;
+import com.abi.base.common.response.ApiResponse;
 import com.abi.maven.archetype.client.TestClient;
 import com.abi.maven.archetype.client.response.TestUserResp;
 import com.abi.maven.archetype.service.UserService;

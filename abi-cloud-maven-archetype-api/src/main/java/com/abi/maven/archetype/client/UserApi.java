@@ -1,6 +1,6 @@
 package com.abi.maven.archetype.client;
 
-import com.abi.base.foundation.response.ApiResponse;
+import com.abi.base.common.response.ApiResponse;
 import com.abi.maven.archetype.to.request.UserReq;
 import com.abi.maven.archetype.to.response.UserResp;
 import org.springframework.web.bind.annotation.GetMapping;
