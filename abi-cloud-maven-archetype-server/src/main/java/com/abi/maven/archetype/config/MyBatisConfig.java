@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
  */
 @Configuration
 @EnableTransactionManagement
-@MapperScan({"com.abi.maven.archetype.mapper"})
+@MapperScan({"com.abi.maven.archetype.dao.mapper"})
 public class MyBatisConfig {
 
     /**
