@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.abi.maven.archetype</groupId>
+    <groupId>abi.cloud.maven.archetype</groupId>
     <artifactId>abi-cloud-maven-archetype-dao</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>abi-cloud-maven-archetype-dao</name>
