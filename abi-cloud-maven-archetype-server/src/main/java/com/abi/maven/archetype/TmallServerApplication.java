@@ -20,7 +20,7 @@ public class TmallServerApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(TmallServerApplication.class, args);
-        log.info(LOG_PRE + "------------ abi-cloud-tmall- 服务 启动成功 ------------");
+        log.info("------------ abi-cloud-tmall- 服务 启动成功 ------------");
     }
 
 }
