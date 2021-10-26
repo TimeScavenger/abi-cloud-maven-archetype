@@ -16,11 +16,11 @@ import static com.abi.base.foundation.constant.CommonConstant.LOG_PRE;
 @EnableDiscoveryClient // 服务注册到注册中心
 @EnableTransactionManagement
 @SpringBootApplication
-public class AbiServerApplication {
+public class TmallServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AbiServerApplication.class, args);
-        log.info(LOG_PRE + "------------ abi-cloud-server-maven 服务启动成功 ------------");
+        SpringApplication.run(TmallServerApplication.class, args);
+        log.info(LOG_PRE + "------------ abi-cloud-tmall- 服务 启动成功 ------------");
     }
 
 }
