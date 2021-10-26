@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import static com.abi.base.foundation.constant.CommonConstant.LOG_PRE;
 
-@Slf4j
 @ComponentScan("com.abi")
 @EnableFeignClients(basePackages = "com.abi")  // 告诉Spring，远程调用的接口都在哪个包下
 @EnableDiscoveryClient // 服务注册到注册中心
@@ -20,7 +19,7 @@ public class TmallServerApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(TmallServerApplication.class, args);
-        log.info("------------ abi-cloud-tmall- 服务 启动成功 ------------");
+        System.out.println("------------ abi-cloud-tmall- 服务 启动成功 ------------");
     }
 
 }
