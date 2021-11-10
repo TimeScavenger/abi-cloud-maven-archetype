@@ -36,8 +36,9 @@
         <mybatis.plus.boot.version>3.4.1</mybatis.plus.boot.version>
         <spring-web.version>5.2.12.RELEASE</spring-web.version>
         <lombok.version>1.18.16</lombok.version>
-        <hibernate-validator.version>6.1.7.Final</hibernate-validator.version>
         <swagger-annotations.version>1.5.20</swagger-annotations.version>
+        <springfox.boot.version>3.0.0</springfox.boot.version>
+        <hibernate-validator.version>6.1.7.Final</hibernate-validator.version>
     </properties>
 
     <dependencyManagement>
@@ -101,11 +102,18 @@
             </dependency>
 
             <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${springfox.boot.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.hibernate.validator</groupId>
                 <artifactId>hibernate-validator</artifactId>
                 <version>${hibernate-validator.version}</version>
                 <scope>compile</scope>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -161,4 +169,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
