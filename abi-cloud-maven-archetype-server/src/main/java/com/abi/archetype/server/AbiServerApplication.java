@@ -16,7 +16,7 @@ public class AbiServerApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AbiServerApplication.class, args);
-        System.out.println("------------ abi-cloud-tmall- 服务 启动成功 ------------");
+        System.out.println("------------ abi-cloud-server 服务 启动成功 ------------");
     }
 
 }
