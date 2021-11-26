@@ -43,7 +43,7 @@ public class SwaggerConfig {
                 .apiInfo(apiInfo())
                 .enable(flag)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.abi.maven.archetype.server.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.abi.archetype.server.controller"))
                 .build();
     }
 
@@ -55,8 +55,8 @@ public class SwaggerConfig {
      */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("abi-cloud-maven-archetype接口文档")
-                .description("abi-cloud-maven-archetype接口文档")
+                .title("abi-cloud-maven-archetype 接口文档")
+                .description("abi-cloud-maven-archetype 接口文档")
                 .termsOfServiceUrl("")
                 .contact(new Contact("", "", ""))
                 .version("1.0")
