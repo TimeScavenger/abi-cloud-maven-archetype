@@ -12,10 +12,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableDiscoveryClient // 服务注册到注册中心
 @EnableTransactionManagement
 @SpringBootApplication
-public class TmallServerApplication {
+public class AbiServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TmallServerApplication.class, args);
+        SpringApplication.run(AbiServerApplication.class, args);
         System.out.println("------------ abi-cloud-tmall- 服务 启动成功 ------------");
     }
 
