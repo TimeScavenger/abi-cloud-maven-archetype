@@ -16,9 +16,10 @@
     <description>abi common project</description>
 
     <dependencies>
+        <!-- 自定义公共文件，开发后期改成jar包形式依赖 -->
         <dependency>
-            <groupId>abi.cloud.base.common</groupId>
-            <artifactId>abi-cloud-base-common</artifactId>
+            <groupId>abi.cloud.base.foundation</groupId>
+            <artifactId>abi-cloud-base-foundation</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
