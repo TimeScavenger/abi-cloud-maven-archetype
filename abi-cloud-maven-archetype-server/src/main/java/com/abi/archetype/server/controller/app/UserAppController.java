@@ -5,7 +5,7 @@ import com.abi.archetype.api.response.UserResp;
 import com.abi.archetype.server.client.TestClient;
 import com.abi.archetype.server.client.response.TestUserResp;
 import com.abi.archetype.server.service.UserService;
-import com.abi.base.common.response.ApiResponse;
+import com.abi.base.foundation.response.ApiResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

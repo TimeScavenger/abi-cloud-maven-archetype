@@ -1,8 +1,8 @@
 package com.abi.archetype.server.client;
 
 import com.abi.archetype.server.client.response.TestUserResp;
-import com.abi.base.common.code.ResultCode;
-import com.abi.base.common.response.ApiResponse;
+import com.abi.base.foundation.code.ResultCode;
+import com.abi.base.foundation.response.ApiResponse;
 import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.openfeign.FeignClient;
