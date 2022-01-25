@@ -2,7 +2,7 @@
 server:
   port: 8080 # 端口号
   servlet:
-    context-path: /server # 访问前缀
+    context-path: /abi-cloud-server # 访问前缀
 
 spring:
   application:
